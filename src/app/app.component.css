@@ -1,0 +1,27 @@
+.container{
+    display: flex;
+    height: 500px;
+    width: 500px;
+    border: 1px solid red;
+    overflow: hidden;
+    position: relative;
+}
+.btn-left, .btn-right{
+    position: absolute;
+}
+.btn-right{
+    right: 0;
+}
+img{
+    width: 100%;
+    object-fit: cover;
+
+}
+img:hover{
+    transform: translateX(-200px);
+}
+
+.btn-right:hover{
+    border: 1px solid red;
+
+}

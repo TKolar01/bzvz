@@ -1,0 +1,18 @@
+<form [formGroup]="formGroup" (ngSubmit)="submit()">
+  <input type="text" formControlName = "firstName">
+  <input type="text" formControlName = "lastName">
+  <div formArrayName = "aliases">
+    <p>Ponavljanje</p>
+    <button (click)="add()">add</button>
+    <div *ngFor="let alias of aliasies.controls; let i = index;">
+      <input type="text" [formControlName]="i">
+    </div>
+  </div>
+  <button  type="submit">Submit</button>
+
+</form>
+
+<p>{{formGroup.status}}</p>
+
+
+
